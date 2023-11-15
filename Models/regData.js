@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const RegSchema = mongoose.Schema({
+const RegDetails = mongoose.Schema({
     event_id: {
         type: Number,
     },
@@ -48,4 +48,4 @@ const RegSchema = mongoose.Schema({
 });
 
 
-export const RegData = mongoose.model('RegSchema', RegSchema, 'RegSchema');
+export const RegData = mongoose.model('RegDetails', RegDetails, 'RegDetails');

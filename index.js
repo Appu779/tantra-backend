@@ -15,7 +15,7 @@ dotenv.config();
 app.use(cors());
 
 const PORT = process.env.PORT || 5000;
-const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.zevvmfz.mongodb.net/?retryWrites=true&w=majority`;
+const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.jptylxb.mongodb.net/tantra?retryWrites=true&w=majority`;
 app.use(express.json())
 
 app.use('/admin', adminRoutes);
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 
-
+mongoose.set("strictQuery", false);
 mongoose.connect(CONNECTION_URL).then(() => {
     app.listen(PORT, () => {
         console.log('App is listening')
