@@ -26,8 +26,14 @@ export const getResponses = async (req, res) => {
         case "ceresponses":
             dept = "ce";
             break;
-        case "ashresponses":
-            dept = "ash";
+        case "csbsresponses":
+            dept = "csbs";
+            break;
+        case "cscyresponses":
+            dept = "cscy";
+            break;
+        case "csdresponses":
+            dept = "csd";
             break;
         case "meresponses":
             dept = "me";
